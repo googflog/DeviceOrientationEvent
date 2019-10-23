@@ -1,9 +1,19 @@
-if (typeof DeviceOrientationEvent.requestPermission === "function") {
-  // if (DeviceOrientationEvent.requestPermission() != "granted") {
-  DeviceOrientationEvent.requestPermission();
-  // }
-} else {
-  // non iOS 13+
+if (
+  DeviceOrientationEvent &&
+  DeviceOrientationEvent.requestPermission &&
+  typeof DeviceOrientationEvent.requestPermission === "function"
+) {
+  DeviceOrientationEvent.requestPermission().then(state => {
+    if (state === "granted") {
+      // self.camera.camera.enterVr(function(err) {
+        if (err) {
+          console.warn(err);
+        }
+      });
+    } else if (state === "denied") {
+      alert("Permission is denied !");
+    }
+  );
 }
 
 /*
