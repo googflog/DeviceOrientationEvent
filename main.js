@@ -6,14 +6,14 @@ if (
   DeviceOrientationEvent.requestPermission().then(state => {
     if (state === "granted") {
       // self.camera.camera.enterVr(function(err) {
-        if (err) {
-          console.warn(err);
-        }
-      });
+      //   if (err) {
+      //     console.warn(err);
+      //   }
+      // });
     } else if (state === "denied") {
       alert("Permission is denied !");
     }
-  );
+  });
 }
 
 /*
