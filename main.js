@@ -42,8 +42,12 @@ class Ball {
   }
   draw() {
     // 位置を計算
-    this.x += vec.x;
-    this.y += vec.y;
+    if (0 < this.x && this.x < SCREEN_WIDTH) {
+      this.x += vec.x;
+    }
+    if (0 < this.y && this.y < SCREEN_HEIGHT) {
+      this.y += vec.y;
+    }
     // 円を描画（塗りつぶし円）
     g.beginPath();
     g.fillStyle = "orange";
