@@ -42,10 +42,10 @@ class Ball {
   }
   draw() {
     // 位置を計算
-    if (0 < this.x && this.x < SCREEN_WIDTH) {
+    if (0 < this.x + vec.x && this.x + vec.x < SCREEN_WIDTH) {
       this.x += vec.x;
     }
-    if (0 < this.y && this.y < SCREEN_HEIGHT) {
+    if (0 < this.y + vec.y && this.y + vec.y < SCREEN_HEIGHT) {
       this.y += vec.y;
     }
     // 円を描画（塗りつぶし円）
