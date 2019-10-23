@@ -1,4 +1,4 @@
-DeviceMotionEvent.requestPermission()
+DeviceOrientationEvent.requestPermission()
   .then(response => {
     if (response == "granted") {
       window.addEventListener("devicemotion", e => {
@@ -7,6 +7,15 @@ DeviceMotionEvent.requestPermission()
     }
   })
   .catch(console.error);
+// DeviceMotionEvent.requestPermission()
+//   .then(response => {
+//     if (response == "granted") {
+//       window.addEventListener("devicemotion", e => {
+//         // do something with e
+//       });
+//     }
+//   })
+//   .catch(console.error);
 
 // /*
 //  * 端末の傾きに応じてボールを動かす
